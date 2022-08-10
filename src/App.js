@@ -6,7 +6,7 @@ import { auth, onAuthStateChanged } from "./firebase_example";
 import Header from "./components/Header/Header";
 import Login from "./components/Login/Login";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home/Home";
+import Home from "./components/props-state/Home";
 import * as PropTypes from "prop-types";
 import AdvoidingRC from "./components/AdvoidingRC/AdvoidingRC";
 import Var from "./components/var/Var";
