@@ -20,7 +20,7 @@ function Header() {
           <a className="navbar-brand" href="#">
             N A T U R E
           </a>
-          <Link to="/home">Home</Link>
+          <Link to="/home">Props- State</Link>
           <Link to="/arc">AdvoidingRC</Link>
           <Link to="/var">Var, let, const</Link>
           <Link to="/function">Function</Link>
