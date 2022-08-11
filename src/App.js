@@ -71,7 +71,7 @@ function App() {
         <Route path="/" element={<Login />} />
       </Routes>
       {user && (
-        <div>
+        <div className="app1">
           <h1>Hello {user.displayName}!</h1>
           <p>{user.email}</p>
           <img src={user.photoUrl} alt="" />

@@ -5,7 +5,7 @@ import "./Ad.css"
 
 const fakeFetch = person => {
   return new Promise(res => {
-    setTimeout(() => res(`${person}'s data`), Math.random() * 3000);
+    setTimeout(() => res(`${person}'s data`), Math.random() * 5000);
   });
 };
 
@@ -36,15 +36,17 @@ export default function AdvoidingRC() {
     //   }, [person]);
   
     return (
-      <div className='Ad'>
+      <div className='Avoid'>
+        <div className="buttons">
         <button onClick={() => setPerson('Nick')}>Nick's Profile</button>
         <button onClick={() => setPerson('Deb')}>Deb's Profile</button>
         <button onClick={() => setPerson('Joe')}>Joe's Profile</button>
+        </div>
         {person && (
-          <Fragment>
+          <div className="content">
             <h1>{person}</h1>
             <p>{loading ? 'Loading...' : data}</p>
-          </Fragment>
+          </div>
         )}
       </div>
     );

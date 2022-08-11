@@ -14,8 +14,13 @@
 
 .navbar {
     position: relative;
+    background: linear-gradient(to right, #b9f3f9, #a7bdfb);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
 
-    background: Black;
+}
+a{
+    text-decoration: none !important;
 }
 
 .navbar-left {
@@ -49,7 +54,7 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    background: RoyalBlue;
+    background: linear-gradient(to right, #b9f3f9, #a7bdfb);
 }
 
 .navbar .nav-link:hover {
