@@ -21,7 +21,7 @@ function Header() {
             N A T U R E
           </a>
           <Link to="/home">Props- State</Link>
-          <Link to="/arc">AdvoidingRC</Link>
+          <Link to="/arc">AvoidingRC</Link>
           <Link to="/var">Var, let, const</Link>
           <Link to="/function">Function</Link>
           <Link to="/pbv-pbr">PBV - PBR</Link>

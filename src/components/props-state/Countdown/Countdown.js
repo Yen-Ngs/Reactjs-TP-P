@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './Countdown.scss';
-
+let isMount = false;
 class Countdown extends PureComponent {
   constructor(props) {
     super(props);
@@ -11,8 +11,13 @@ class Countdown extends PureComponent {
   }
 
   componentDidMount() {
+    isMount = true;
     const { seconds } = this.props;
     this.countdown(seconds);
+  }
+
+  componentWillUnmount() {
+    isMount = false;
   }
 
   countdown(seconds) {
@@ -23,7 +28,9 @@ class Countdown extends PureComponent {
 
     // Continue to count after 1s
     setTimeout(
-      () => this.countdown(seconds - 1),
+      () => {
+        if (isMount) this.countdown(seconds - 1)
+      },
       1000
     );
   };
