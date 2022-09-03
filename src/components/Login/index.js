@@ -132,8 +132,8 @@ function Login() {
           >
             <defs>
               <linearGradient id="a" x1="0%" y1="0%" y2="0%">
-                <stop offset="0%" stop-color="#8ceabb" />
-                <stop offset="100%" stop-color="#378f7b" />
+                <stop offset="0%" stopColor="#8ceabb" />
+                <stop offset="100%" stopColor="#378f7b" />
               </linearGradient>
             </defs>
             <path
