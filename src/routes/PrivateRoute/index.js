@@ -5,7 +5,7 @@ import { selectUser } from "../../features/userSlice";
 function PrivateRoute({ children }) {
   const auth = useSelector(selectUser);
 
-  return auth ? children : <Navigate to="/" />;
+  return auth ? children : <Navigate to="/" />; 
 }
 
 export default PrivateRoute;

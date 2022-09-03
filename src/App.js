@@ -2,16 +2,13 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import { login, logout, selectUser } from "./features/userSlice";
-import { auth, onAuthStateChanged } from "./firebase_example";
-import Header from "./components/Header/Header";
-import Login from "./components/Login/Login";
+import { auth, onAuthStateChanged } from "./config/firebase_example";
+import Header from "./components/Header";
+import Login from "./components/Login";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/props-state/Home";
+import Home from "./components/Home";
+import Register from "./components/Register";
 import * as PropTypes from "prop-types";
-import AdvoidingRC from "./components/AdvoidingRC/AdvoidingRC";
-import Var from "./components/var/Var";
-import Funciton from "./components/function/funciton";
-import Pbv from "./components/Pbv-Pbr/Pbv-Pbr";
 
 import PrivateRoute from "./routes/PrivateRoute";
 
@@ -36,39 +33,8 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
-          path="arc"
-          element={
-            <PrivateRoute>
-              <AdvoidingRC />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="var"
-          element={
-            <PrivateRoute>
-              <Var />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="function"
-          element={
-            <PrivateRoute>
-              <Funciton />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="pbv-pbr"
-          element={
-            <PrivateRoute>
-              <Pbv />
-            </PrivateRoute>
-          }
-        />
         <Route path="/" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
       </Routes>
       {user && (
         <div className="app1">

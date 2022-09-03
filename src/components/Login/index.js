@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 import {
   auth,
   createUserWithEmailAndPassword,
   updateProfile,
   signInWithEmailAndPassword,
-} from "../../firebase_example";
+} from "../../config/firebase_example";
 
 import { login, selectUser } from "../../features/userSlice";
 
-import "./Login.scss";
+import "./index.scss";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -96,12 +96,12 @@ function Login() {
     //       placeholder='Profile picture URL (optional)'
     //       type='text'
     //     />
-    //     <input
-    //       value={email}
-    //       onChange={(e) => setEmail(e.target.value)}
-    //       placeholder='Email'
-    //       type='email'
-    //     />
+        // <input
+        //   value={email}
+        //   onChange={(e) => setEmail(e.target.value)}
+        //   placeholder='Email'
+        //   type='email'
+        // />
     //     <input
     //       value={password}
     //       onChange={(e) => setPassword(e.target.value)}
@@ -142,7 +142,7 @@ function Login() {
             />
           </svg>
 
-          <h2>Sign Up</h2>
+          <h2>Sign In</h2>
 
           <form action="" method="post" className="form">
             <div className="form__field">
@@ -169,7 +169,8 @@ function Login() {
           </form>
 
           <p>
-            Already have an accout? <a href="#">Sign Up</a>
+            {/* Already have an accout? <a href="#"></a> */}
+            Already have an accout? <Link to="/Register">Sign Up</Link>
           </p>
         </div>
       </div>
